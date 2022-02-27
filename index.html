@@ -5,6 +5,50 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>h</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                outline: 0;
+                box-sizing: border-box;
+            }
+            .h {
+                width: 100vw;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img {
+                height: 100%;
+                z-index: 1;
+            }
+            h1 {
+                position: absolute;
+                top: calc(69% - 19%);
+                font-size: 2vw;
+                z-index: 10;
+            }
+        </style>
     </head>
-    <body></body>
+    <body>
+        <div class="h">
+            <img src="./h.jpeg" alt="h" />
+            <h1 id="ip"></h1>
+        </div>
+
+        <script>
+            function json(url) {
+                return fetch(url).then((res) => res.json());
+            }
+
+            let apiKey =
+                "4705babca57da662b97a3704281d8aa00fcc29b5a643f42c4cb56d36";
+            json(`https://api.ipdata.co?api-key=${apiKey}`).then((data) => {
+                console.log(data.ip);
+                console.log(data.city);
+                console.log(data.country_code);
+            });
+        </script>
+    </body>
 </html>
