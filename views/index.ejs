@@ -5,12 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>h</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet"
+        />
         <style>
             * {
                 padding: 0;
                 margin: 0;
                 outline: 0;
                 box-sizing: border-box;
+                font-family: Roboto;
             }
             .h {
                 width: 100vw;
@@ -25,7 +32,7 @@
             }
             h1 {
                 position: absolute;
-                top: calc(69% - 19%);
+                top: calc(69% - 15%);
                 font-size: 2vw;
                 z-index: 10;
             }
@@ -33,22 +40,8 @@
     </head>
     <body>
         <div class="h">
-            <img src="./h.jpeg" alt="h" />
-            <h1 id="ip"></h1>
+            <img src="/h.jpeg" alt="h" />
+            <h1 id="ip"><%= ip %></h1>
         </div>
-
-        <script>
-            function json(url) {
-                return fetch(url).then((res) => res.json());
-            }
-
-            let apiKey =
-                "4705babca57da662b97a3704281d8aa00fcc29b5a643f42c4cb56d36";
-            json(`https://api.ipdata.co?api-key=${apiKey}`).then((data) => {
-                console.log(data.ip);
-                console.log(data.city);
-                console.log(data.country_code);
-            });
-        </script>
     </body>
 </html>
