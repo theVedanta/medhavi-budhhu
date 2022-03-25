@@ -3,7 +3,12 @@
     margin: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: "Roboto";
+    font-family: Roboto;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 .h {
     width: 100vw;
@@ -11,6 +16,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(26, 27, 27);
+    overflow: hidden;
+    overflow-y: hidden;
 }
 img {
     height: 100%;
@@ -21,4 +29,15 @@ h1 {
     top: calc(69% - 15%);
     font-size: 2vw;
     z-index: 10;
+}
+.trans {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #ff6363;
+    font-size: min(1.5vw, 28px);
+    transform: rotate(-15deg) scale(1.5);
+    user-select: none;
+    overflow: hidden;
 }
